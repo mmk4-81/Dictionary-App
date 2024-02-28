@@ -9,6 +9,7 @@ btn.addEventListener('click', () => {
     fetch(`${url}${inpWord}`)
         .then((response) => response.json())
         .then((data) => {
+            console.log(data);
             result.innerHTML =
                 `<div class="word">
         <h3>${inpWord}</h3>
@@ -23,9 +24,10 @@ btn.addEventListener('click', () => {
       </p>
       <p class="word-example">
       ${data[0].meanings[0].definitions[0].example || ""}
+      
       </p>`;
-            sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
-
+            sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
+            console.log(document.querySelector('.word-example'));
         })
         .catch(() => {
             result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
