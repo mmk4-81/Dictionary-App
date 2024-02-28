@@ -50,6 +50,11 @@ body {
     outline: none;
 }
 
+.search-box button:hover{
+    background-color: #575a7b;
+    cursor: pointer;
+}
+
 .result{
     position: relative;
 }
@@ -96,4 +101,9 @@ body {
 .error{
      margin-top: 80px;
      text-align: center;
+}
+
+.icon:hover{
+    color: #575a7b;
+    cursor: pointer;
 }
