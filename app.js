@@ -27,7 +27,6 @@ btn.addEventListener('click', () => {
       
       </p>`;
             sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
-            console.log(document.querySelector('.word-example'));
         })
         .catch(() => {
             result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
